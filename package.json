@@ -14,7 +14,7 @@
     "merusira"
   ],
   "engines": {
-    "node": ">=16.9.1"
+    "node": ">=11.4.0"
   },
   "bugs": {
     "url": "https://github.com/merusira/starscape-toolbox/issues"
@@ -26,6 +26,6 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "electron": "^13.6.9"
+    "electron": "^11.0.5"
   }
 }
