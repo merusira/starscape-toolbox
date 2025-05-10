@@ -1,0 +1,20 @@
+{
+    "branch": "master",
+    "uilanguage": "en",
+    "updatelog": false,
+    "devmode": false,
+    "noselfupdate": false,
+    "noupdate": false,
+    "noslstags": false,
+    "removecounters": false,
+    "patchVersion": "100.02 Starscape",
+    "gui": {
+        "theme": "starscape",
+        "autostart": false,
+        "logtimes": true,
+        "cleanstart": false,
+        "maximized": false,
+        "width": 1080,
+        "height": 600
+    }
+}

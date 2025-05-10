@@ -1,0 +1,607 @@
+@import url("./ubuntu-regular.css");
+@import url("./ubuntu-mono-regular.css");
+@import url("./materialdesignicons.min.css");
+@import url("./microtip.css");
+
+/* ************* */
+/* BASIC         */
+/* ************* */
+body {
+	font-family: Ubuntu, sans serif;
+	overflow: hidden;
+	background: var(--main-background);
+	color: var(--main-font-color);
+	margin: 0px;
+	border-style: solid;
+	border-color: var(--border-color);
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+label {
+	font-size: 14px;
+}
+
+p {
+	margin: 1px;
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+/* ************* */
+/* SELECTION     */
+/* ************* */
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+::selection {
+	background: var(--selection-color);
+}
+
+/* ************* */
+/* SCROLLBAR     */
+/* ************* */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-thumb-hover-color);
+}
+
+/* ************* */
+/* HEADER     */
+/* ************* */
+.header-base {
+	display: flex;
+	min-height: 32px;
+	height: 32px;
+	background: var(--header-background-color);
+}
+
+.header-base> * {
+	font-size: 14px;
+}
+
+.header-icon {
+	-webkit-app-region: drag;
+	width: 24px;
+	height: 24px;
+	margin: 4px;
+	background-image: url(../assets/icon.ico);
+	background-size: 24px;
+}
+
+.header-button {
+	margin-bottom: 6px;
+	font-size: 20px;
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: background ease 0.32s;
+	cursor: pointer;
+}
+.mod-action-button {
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: background ease 0.32s;
+	cursor: pointer;
+}
+
+.mod-action-button-red {
+	color: #ff3333;
+}
+
+.mod-empty-action-button {
+	width: 10px;
+	height: 20px;
+	font-size: 20px;
+	padding: 2px;
+}
+
+.header-button:hover {
+	background-color: var(--header-button-hover-color);
+}
+.mod-action-button:hover {
+	background-color: var(--header-button-hover-color);
+}
+
+.header-text {
+	-webkit-app-region: drag;
+	padding-top: 8px;
+	padding-right: 7px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.header-status {
+	-webkit-app-region: drag;
+	padding: 8px;
+	flex-grow: 1;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: -65px;
+	opacity: 50%;
+}
+
+.admin-badge {
+	-webkit-app-region: drag;
+	vertical-align: middle;
+	padding-top: 6px;
+	font-size: 17px;
+	display: none; /* Hide the admin badge completely */
+}
+
+.admin-badge-disabled {
+	color: gray;
+}
+
+.admin-badge-enabled {
+	color: #7053F8;
+}
+
+/* **************** */
+/* Custom secondary button*/
+/* **************** */
+
+.secondary-button {
+	padding: 4px;
+	padding-bottom: 1px;
+	height: 24px;
+	cursor: pointer;
+	transition: background ease 0.32s;
+}
+
+.secondary-button > span:first-child {
+	font-size: 17px;
+}
+
+.secondary-button:hover {
+	background-color: var(--main-control-hover-background-color);
+}
+
+/* **************** */
+/* TABS ROW CONTROLS*/
+/* **************** */
+.tabs-base {
+	display: flex;
+	min-height: 36px;
+	height: 36px;
+	display: flex;
+	background: var(--main-control-background-color);
+}
+
+.tabs-base label {
+	padding: 9px;
+	cursor: pointer;
+	transition: background ease 0.32s;
+}
+
+.tabs-base > div:first-child {
+	margin-left: 5px;
+}
+
+.tabs-base label:hover {
+	background-color: var(--main-control-hover-background-color);
+}
+
+.tabs-base label> span:first-child {
+	font-size: 17px;
+}
+
+.tabs-base button {
+	background-color: var(--main-control-start-button-background-color);
+	color: var(--main-font-color);
+	transition: background ease 0.32s;
+	border: 0px;
+	width: 170px;
+	margin-left: 5px;
+	margin-right: 0;
+	cursor: pointer;
+	height: 36px; /* Ensure consistent height */
+}
+
+/* Right controls container */
+.right-controls {
+	display: flex;
+	align-items: flex-end; /* Align items to the bottom */
+	margin-left: auto;
+	margin-right: 5px;
+	gap: 0;
+}
+
+/* Patch banner styling */
+.patch-banner {
+	display: flex;
+	align-items: flex-end; /* Align to bottom */
+	justify-content: center;
+	height: 33px;
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	min-width: 180px;
+	margin-right: -22px;
+}
+
+.patch-banner img {
+	height: 65px;
+	width: auto;
+	max-width: 220px;
+	object-fit: contain;
+	transition: all 0.2s ease;
+	image-rendering: -webkit-optimize-contrast; /* Improves image clarity */
+	margin-bottom: 0; /* Align bottom with the button */
+	margin-top: -36px; /* Adjust vertical position */
+}
+
+/* Patch selector dropdown */
+.patch-selector {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 5px;
+}
+
+.patch-selector select {
+	background-color: var(--main-control-background-color);
+	color: var(--main-font-color);
+	border: 1px solid var(--border-color);
+	padding: 4px 4px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: background-color 0.3s ease;
+}
+
+.patch-selector select:hover {
+	background-color: var(--main-control-hover-background-color);
+}
+
+.patch-selector select:focus {
+	outline: none;
+	border-color: var(--main-control-select-background-color);
+}
+
+.tabs-base button>span:first-child {
+	font-size: 15px;
+}
+
+.tabs-base button>span:nth-child(2) {
+	font-size: 15px;
+}
+
+.tabs-base button:hover {
+	background: var(--main-control-start-button-hover-color);
+}
+
+.tabs-base button:focus {
+	outline: 0;
+}
+
+.tabs-base input[type="radio"] {
+	display: none;
+}
+
+.tabs-base input[type="radio"]:checked+label {
+	background: var(--main-control-select-background-color);
+}
+
+/* **************** */
+/* TABS  WRAPPERS   */
+/* **************** */
+.tab {
+	display: none;
+	padding: 5px;
+	flex-grow: 1;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.tab--active {
+	display: block;
+}
+
+/* ************* */
+/* LOG STYLES    */
+/* ************* */
+
+.log-contents {
+	background: var(--log-background);
+	color: var(--log-text-color);
+	padding: 1px;
+	font-family: Ubuntu Mono, monospace;
+	font-size: 14px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.log-contents>div.log {
+	color: var(--log-text-color);
+}
+
+.log-contents>div.warn {
+	color: var(--log-text-warn-color);
+}
+
+.log-contents>div.error {
+	color: var(--log-text-error-color);
+}
+
+.scroller-small {
+	height: calc(100vh - 118px);
+	overflow-y: auto;
+}
+
+.scroller {
+	height: calc(100vh - 84px);
+	overflow-y: auto;
+}
+
+
+/* Visible content basic style */
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/************
+ * SETTINGS *
+ ************/
+/* Visible content basic style */
+.setting {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--settings-background-color);
+	padding: 5px;
+	margin: 1px;
+	min-width: 90%;
+	font-size: 14px;
+}
+
+.setting-transparent {
+	
+	background-color: transparent;
+	padding: 5px;
+	margin: 1px;
+	min-width: 90%;
+	font-size: 14px;
+}
+
+.setting > div:first-child {
+	margin-left: auto;
+	text-align: end;
+	width: 50%;
+}
+
+.setting > div:nth-child(2) {
+	margin-right: auto;
+	width: 50%;
+	margin-left: 15px;
+}
+
+.control-secondary {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--control-secondary-background-color);
+	margin: 1px;
+	padding-top: 2px;
+    margin-bottom: 2px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.control-secondary > *{
+	margin-right: 3px;
+	padding-top: 1px;
+}
+
+/***********
+ * MODULES *
+ ***********/
+.mod-info {
+	background-color: var(--mod-card-background-color);
+	padding: 6px;
+	margin: 1px;
+	min-width: 95%;
+	border-style: solid;
+	border-width: 0px 0px 0px 3px;
+	border-color: var(--mod-card-background-color);
+}
+
+	.mod-info.disabled-border {
+		border-color: var(--mod-card-disabled-border-color);
+	}
+
+/* Visible content basic style */
+.mod-info-controls {
+	display: flex;
+	flex-direction: row;
+	margin-right: 1px;
+	justify-content: flex-end;
+}
+
+/* Always visible mod controls */
+.mod-always-visible-controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 2px 0;
+	padding-right: 6px;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	min-width: 60px; /* Ensure enough space for buttons */
+	z-index: 1; /* Ensure buttons are above other content */
+}
+
+.mod-always-visible-controls > div {
+	margin-left: 5px;
+}
+
+/* Ensure mod info has consistent positioning */
+.mod-info {
+	position: relative;
+}
+
+details:focus {
+	outline: 0;
+}
+
+summary:focus {
+	outline: 0;
+}
+
+.spacer {
+	flex-grow: 1
+}
+
+/* Ensure mod name doesn't overlap with buttons */
+summary > span {
+	display: inline-block;
+	max-width: calc(100% - 70px);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+details > summary {
+	list-style: none;
+}
+
+details > p {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	color: var(--mod-card-info-font-color);
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	margin-left: 1px;
+	margin-right: 1px;
+	font-size: 14px;
+	cursor: pointer;
+	display: flex;
+	align-items: flex-start;
+	padding-top: 2px;
+}
+
+/* Prevent author name from overlapping with buttons */
+.mod-author {
+	margin-right: 60px; /* Space for buttons */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 40%;
+}
+
+.floating-elem {
+	position: fixed;
+	top: 80px;
+	right: 14px;
+	display: block;
+	z-index: 9;
+	font-size: 20px;
+	color: var(--float-element-text-color);
+	cursor: pointer;
+}
+
+.floating-elem-two {
+	position: fixed;
+	top: 80px;
+	right: 34px;
+	display: block;
+	z-index: 9;
+	font-size: 20px;
+	color: var(--float-element-text-color);
+	cursor: pointer;
+}
+
+.floating-elem:hover {
+	background-color: var(--float-element-hover-background-color);
+}
+
+.floating-elem-two:hover {
+	background-color: var(--float-element-hover-background-color);
+}
+
+/*************
+ * MODAL BOX *
+ *************/
+ .modalbox {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: var(--modal-box-background-color);
+}
+
+.modalbox-content {
+    background-color: var(--modal-box-content-background-color);
+	position: absolute;
+	padding: 15px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modalbox-text {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    font-size: 16px;
+}
+
+/*************
+ *  LOADING  *
+ *************/
+
+#loading {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#loading img {
+	height: 64px;
+	width: 64px;
+	margin-bottom: 10px;
+}
+
+.snowflake {
+	position: fixed;
+	background-color: #CCC;
+	user-select: none;
+	z-index: 1000;
+	pointer-events: none;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+  }
+
+Input[type=checkbox]:checked{filter:hue-rotate(25deg);}

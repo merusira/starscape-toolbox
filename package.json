@@ -1,0 +1,31 @@
+{
+  "name": "tera-starscape",
+  "version": "1.0.1",
+  "description": "Comprehensive modding framework for TERA Starscape.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merusira/starscape-toolbox.git"
+  },
+  "author": "Caali",
+  "contributors": [
+    "Pinkie Pie",
+    "meishu",
+	"JKQ",
+    "merusira"
+  ],
+  "engines": {
+    "node": ">=16.9.1"
+  },
+  "bugs": {
+    "url": "https://github.com/merusira/starscape-toolbox/issues"
+  },
+  "homepage": "https://github.com/merusira/starscape-toolbox",
+  "dependencies": {
+    "binary-search": "^1.3.6",
+    "fast-xml-parser": "^5.2.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "electron": "^13.6.9"
+  }
+}
